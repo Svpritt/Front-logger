@@ -3,9 +3,8 @@ const levels = {
   INFO: 1,
   ERROR: 2
 };
-// Текущий уровень логгирования (можно изменить по необходимости)
+// Current logging level (can be changed if necessary)
 const currentLogLevel = levels.ERROR;
-// Функция логгирования
 const logger = {
   debug: (message) => {
     if (currentLogLevel <= levels.DEBUG) {
@@ -22,12 +21,13 @@ const logger = {
       console.error(message);
     }
   }
-};"  утсанавливая уровень я регулирую будут ли отображаться те или иные логи, 
-
-додумался не сам, вчера вечером смотрел как работают node.js логгеры через библиотеки, потом нашел статью о фронтэнде где увидел эту цитату
-
-In short, you need an abstraction that enables you to establish conventions and control logs. That abstraction can be as simple as:
-
-const MyLogger = (...args) => {
-  console.log(...args);
 };
+
+
+//I didn't think of it myself, last night I watched how node.js loggers work through libraries, then I found an article about the frontend where I saw this quote
+
+//In short, you need an abstraction that enables you to establish conventions and control logs. That abstraction can be as simple as:
+
+//const MyLogger = (...args) => {
+//  console.log(...args);
+//};
